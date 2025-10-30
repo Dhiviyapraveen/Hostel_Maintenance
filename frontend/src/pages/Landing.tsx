@@ -18,18 +18,16 @@ const Landing = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-primary/80"></div>
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(30, 64, 175, 0.4)" }}></div>
+
+
         </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center min-h-screen">
           <div className="text-center space-y-8 max-w-3xl animate-fade-in">
             <div className="space-y-4">
-              <div className="inline-block">
-                <div className="w-20 h-20 rounded-2xl bg-accent flex items-center justify-center mb-6 animate-float mx-auto">
-                  <span className="text-primary font-bold text-3xl">HC</span>
-                </div>
-              </div>
+              
               <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground">
                 Welcome to HostelCare
               </h1>

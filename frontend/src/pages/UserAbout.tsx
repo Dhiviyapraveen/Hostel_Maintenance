@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutImage from "@/assets/about-image.jpg";
+import aboutImage from "@/assets/aboutus.jpg";
 
 const UserAbout = () => {
   const navigate = useNavigate();
@@ -68,15 +68,6 @@ const UserAbout = () => {
                     <span>Network and connectivity support for uninterrupted internet access</span>
                   </li>
                 </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our team of experienced professionals is committed to resolving issues quickly
-                  and effectively. With our easy-to-use complaint management system, you can track
-                  your requests and stay informed throughout the resolution process.
-                </p>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutImage from "@/assets/about-image.jpg";
+import aboutImage from "@/assets/aboutus.jpg";
 
 const AdminAbout = () => {
   const navigate = useNavigate();
@@ -57,14 +57,6 @@ const AdminAbout = () => {
                   <li className="flex items-start">
                     <span className="inline-block w-2 h-2 rounded-full bg-accent mt-2 mr-3"></span>
                     <span>Dashboard analytics for monitoring pending and resolved issues</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 rounded-full bg-accent mt-2 mr-3"></span>
-                    <span>Detailed complaint information including room numbers and descriptions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 rounded-full bg-accent mt-2 mr-3"></span>
-                    <span>Quick status updates with dropdown selections</span>
                   </li>
                 </ul>
               </div>

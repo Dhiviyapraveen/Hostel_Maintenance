@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import { Hammer, Wrench, Zap, Sparkles, Wifi } from "lucide-react";
+import { Hammer, Wrench, Zap, Sparkles, Wifi, Package } from "lucide-react";
 
 const StudentHome = () => {
   const navigate = useNavigate();
@@ -49,12 +49,18 @@ const StudentHome = () => {
       path: "/network",
       description: "Internet connectivity and WiFi issues",
     },
+    {
+      title: "Others",
+      icon: Package,
+      path: "/others",
+      description: "General issues not listed in other categories",
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar role="student" userName={userName || ""} roomNo={roomNo || ""} />
-      
+
       <main className="flex-1 container mx-auto px-4 py-12">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">Welcome, {userName}!</h1>

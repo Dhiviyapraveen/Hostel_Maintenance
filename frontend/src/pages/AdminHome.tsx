@@ -3,31 +3,44 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Hammer, Wrench, Zap, Sparkles, Wifi, ClipboardList, CheckCircle } from "lucide-react";
+import { 
+  Card, 
+  CardContent, 
+  CardHeader, 
+  CardTitle 
+} from "@/components/ui/card";
+import { 
+  Hammer, 
+  Wrench, 
+  Zap, 
+  Sparkles, 
+  Wifi, 
+  ClipboardList, 
+  CheckCircle, 
+  Package 
+} from "lucide-react";
 
 const AdminHome = () => {
   const navigate = useNavigate();
   const userName = localStorage.getItem("userName");
   const [stats, setStats] = useState({ pending: 0, resolved: 0 });
 
-useEffect(() => {
-  const fetchStats = async () => {
-    try {
-      const res = await fetch("http://localhost:5000/api/issues/status");
-      const data = await res.json();
-      setStats({
-        pending: data.pending || 0,
-        resolved: data.resolved || 0,
-      });
-    } catch (error) {
-      console.error("Error fetching dashboard stats:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/issues/status");
+        const data = await res.json();
+        setStats({
+          pending: data.pending || 0,
+          resolved: data.resolved || 0,
+        });
+      } catch (error) {
+        console.error("Error fetching dashboard stats:", error);
+      }
+    };
 
-  fetchStats();
-}, []);
-
+    fetchStats();
+  }, []);
 
   const services = [
     {
@@ -59,6 +72,12 @@ useEffect(() => {
       icon: Wifi,
       path: "/complaintnetwork",
       description: "View and manage network complaints",
+    },
+    {
+      title: "Others",
+      icon: Package,
+      path: "/complaintothers",
+      description: "View and manage other general complaints",
     },
   ];
 
