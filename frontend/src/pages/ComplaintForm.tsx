@@ -26,6 +26,7 @@ const ComplaintForm = () => {
     "/electrical": "Electrical",
     "/housekeeping": "Housekeeping",
     "/network": "Network",
+    "/others": "Others",
   };
 
   const category = categoryMap[location.pathname] || "General";

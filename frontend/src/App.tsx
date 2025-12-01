@@ -33,6 +33,7 @@ const App = () => (
           <Route path="/electrical" element={<ComplaintForm />} />
           <Route path="/housekeeping" element={<ComplaintForm />} />
           <Route path="/network" element={<ComplaintForm />} />
+          <Route path="/others" element={<ComplaintForm />} />
           <Route path="/userhistory" element={<UserHistory />} />
           <Route path="/userabout" element={<UserAbout />} />
           <Route path="/adminhome" element={<AdminHome />} />
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/complaintelectrical" element={<AdminComplaintView />} />
           <Route path="/complainthousekeeping" element={<AdminComplaintView />} />
           <Route path="/complaintnetwork" element={<AdminComplaintView />} />
+          <Route path="/complaintothers" element={<AdminComplaintView />} />
           <Route path="/adminabout" element={<AdminAbout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
