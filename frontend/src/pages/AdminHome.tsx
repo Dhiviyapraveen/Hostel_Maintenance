@@ -28,7 +28,7 @@ const AdminHome = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/issues/status");
+        const res = await fetch("https://hostel-maintenance.onrender.com/api/issues/status");
         const data = await res.json();
         setStats({
           pending: data.pending || 0,

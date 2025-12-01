@@ -58,7 +58,7 @@ const ComplaintForm = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/issues", {
+      const response = await fetch("https://hostel-maintenance.onrender.com/api/issues", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

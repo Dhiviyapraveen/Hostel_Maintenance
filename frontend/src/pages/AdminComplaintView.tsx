@@ -62,7 +62,7 @@ const AdminComplaintView = () => {
 
   const loadIssues = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/issues");
+      const response = await axios.get("https://hostel-maintenance.onrender.com/api/issues");
       // Filter by category dynamically
       const filteredIssues = response.data.filter(
         (issue: Issue) => issue.category === category
@@ -86,7 +86,7 @@ const AdminComplaintView = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/issues/${id}`, { status: newStatus });
+      await axios.put(`https://hostel-maintenance.onrender.com/api/issues/${id}`, { status: newStatus });
       toast.success("Issue status updated successfully!");
       loadIssues(); // refresh list
     } catch (error) {

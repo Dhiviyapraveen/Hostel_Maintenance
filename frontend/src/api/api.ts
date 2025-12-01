@@ -1,5 +1,5 @@
 // src/api/api.ts
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://hostel-maintenance.onrender.com/api";
 
 export const loginUser = async (username: string, password: string, roomNo?: string) => {
   const res = await fetch(`${API_URL}/auth/login`, {

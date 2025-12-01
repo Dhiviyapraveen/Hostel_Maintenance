@@ -40,7 +40,7 @@ const UserHistory = () => {
 
     const fetchComplaints = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/issues");
+        const res = await fetch("https://hostel-maintenance.onrender.com/api/issues");
         if (!res.ok) {
           throw new Error("Failed to fetch complaints");
         }
